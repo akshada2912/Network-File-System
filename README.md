@@ -64,6 +64,7 @@ Acknowledgment and Client Notification: Upon the successful completion of the co
 NOTE: Marks awarded here are essentially for the requests to the NM. Actual implementation of the requests by the NM and SSs have been assigned points in Specification 1.
 
 3. Other features
+
 3.1 MULTIPLE CLIENTS 
 Concurrent Client Access: Your NFS design accommodates multiple clients attempting to access the Naming Server (NM) simultaneously. To ensure a smooth experience, the NM responds to client requests with an initial ACK to acknowledge the receipt of the request. If this initial ACK is not received within a reasonable timeframe, the client may display a timeout message. Importantly, the NM should not block while processing operations specified in parts 2 and 3 of Specification 2. To achieve this, an initial ACK and a final ACK from the relevant Storage Server (SS) can be employed, allowing the NM to handle other requests between these acknowledgments.
 Concurrent File Reading: While multiple clients can read the same file simultaneously, only one client can execute write operations on a file at any given time.
